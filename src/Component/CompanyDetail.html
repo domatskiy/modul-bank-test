@@ -1,0 +1,10 @@
+<div class="company-detail" style="padding: 5px; border: 1px solid #ccc; margin: 10px 0;">
+  Наименование: {{company.name}}<br>
+  ОГРН: {{company.ogrn}}<br>
+  Тип: {{company.type}}<br>
+  Дата рег: {{company.date_reg}}<br>
+  Актиен: {{company.active ? 'Да' : 'Нет'}}<br>
+  <br>
+  <a ng-href="/" style="color: red; cursor: pointer">back</a>
+  <a ng-click="edit(company.id)" style="color: red; cursor: pointer">правка</a>
+</div>

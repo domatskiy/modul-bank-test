@@ -1,0 +1,27 @@
+<div>
+  <form ng-submit="saveCompany($event)" style="padding: 10px">
+      Активность <input type="checkbox" ng-model="company.active" ng-true-value="1" ng-false-value="0"><br><br>
+
+      <label>Название</label>
+      <input placeholder="name" ng-model="company.name"><br><br>
+
+      <label>Форма</label>
+      <select ng-model="company.type">
+          <option>ИП</option>
+          <option>ООО</option>
+      </select><br><br>
+
+      <label>{{company.type == 'ИП' ? 'ОГРНИП' : 'ОГРН'}}</label>
+      <input ng-model="company.ogrn"><br><br>
+
+      <label>Дата регистрации</label>
+      <input class="m-date" ng-model="company.date_reg"><br><br>
+
+      <br>
+      <br>
+      <button type="submit">Отправить</button>
+      <div ng-if="saved">сохранено</div>
+  </form>
+  <br><br>
+  <a ng-href="/company/{{company.id}}" style="color: red; cursor: pointer">back</a>
+</div>
